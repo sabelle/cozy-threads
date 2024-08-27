@@ -1,0 +1,12 @@
+{
+    "short_name": "cozy threads",
+    "name": "cozy threads",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "64x64",
+        "type": "image/x-icon"
+      }
+    ]
+  }
+  

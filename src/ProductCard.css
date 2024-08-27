@@ -1,0 +1,25 @@
+.Card-list {
+    flex-direction: row;
+  }
+  
+  .Card {
+    border-color: gray;
+    display: flex;
+    height: 200px;
+  
+  };
+
+  .Card-photo {
+    flex: 50%;
+    float: left;
+  };
+  
+  .Card-info {
+    flex: 50%;
+    float: left;
+  }
+  
+  .Card-cart-row {
+    flex-direction: row;
+  };
+  
