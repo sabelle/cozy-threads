@@ -8,7 +8,7 @@ import './ProductCard.css';
 const ProductCard = ({product}) => {
   return(
     <div className='Card'>
-      <div className='cont'>
+      <div className='container'>
         <img src={product.image} alt='404' className='Card-photo'/>
         <div className='Card-info'>
           <h2>{product.title}</h2>
