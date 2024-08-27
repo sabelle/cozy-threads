@@ -1,6 +1,6 @@
 // import React, {useState} from 'react';
 import React from 'react';
-import './App.css';
+import './Home.css';
 import ProductCard from './ProductCard.js'
 import {catalog} from './ProductInfo.js';
 
@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='Card-list'>
+      <div className='Home-grid'>
         
         {catalog.map(product => (<ProductCard product={product} className ='Card'/>))}
 

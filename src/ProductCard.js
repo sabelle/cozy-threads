@@ -8,16 +8,17 @@ import './ProductCard.css';
 const ProductCard = ({product}) => {
   return(
     <div className='Card'>
-      <img src={product.image} alt='404' className='Card-photo'/>
-      <div className='Card-info'>
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
-        <div className='Card-cart-row'>
-          <IconButton> <RemoveIcon /> </IconButton>
-          <>counter</>
-          <IconButton> <AddIcon /> </IconButton>
+      <div className='cont'>
+        <img src={product.image} alt='404' className='Card-photo'/>
+        <div className='Card-info'>
+          <h2>{product.title}</h2>
+          <p>{product.description}</p>
+          <div className='Card-cart-row'>
+            <IconButton> <RemoveIcon /> </IconButton>
+            <>counter</>
+            <IconButton> <AddIcon /> </IconButton>
+          </div>    
         </div>
-                
       </div>
     </div>
   )

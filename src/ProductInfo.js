@@ -27,7 +27,7 @@ const catalog = [
     id: 4, 
     type: 'accessory',
     image: 'assets/scarf-redblack.jpg',
-    title: 'red & black plaid scarf',
+    title: 'red plaid scarf',
     description: 'red & black plaid scarf crafted by artisans in guatemala', 
     price: 15.00
   },
@@ -35,7 +35,7 @@ const catalog = [
     id: 5,
     type: 'accessory',
     image: 'assets/scarf-bluegreen.jpg',
-    title: 'blue & green plaid scarf',
+    title: 'blue plaid scarf',
     description: 'blue & green plaid scarf crafted by artisans in guatemala', 
     price: 15.00
   }
