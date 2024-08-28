@@ -16,7 +16,7 @@ const ProductCard = ({onChange, product, quantity}) => {
           <p>{product.description}</p>
           <div className='Card-cart-row'>
             <IconButton onClick={()=>onChange(product.id, -1)}> <RemoveIcon /> </IconButton>
-              <p> {quantity} </p>
+              <> {quantity} </>
             <IconButton onClick={()=>onChange(product.id, 1)}> <AddIcon /> </IconButton>
           </div>    
         </div>

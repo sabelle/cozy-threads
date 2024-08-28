@@ -1,0 +1,13 @@
+ul {
+    list-style-type: none;
+  }
+
+.nav-bar {
+    display: flex;
+    justify-content: right;
+}
+
+.nav-page {
+    padding-left: 5px;
+    padding-right: 5px;
+}

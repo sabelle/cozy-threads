@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
-import './Home.css';
+import React, {useState} from 'react'
+import './Home.css'
 import ProductCard from './ProductCard.js'
-import {catalog} from './ProductInfo.js';
+import Navigation from './Navigation.js'
+import {catalog} from './ProductInfo.js'
 
 const Home = () => {
   const [cart, setCart] = useState(new Map())
@@ -27,6 +28,7 @@ const Home = () => {
 
   return (
     <>
+      <Navigation />
       <div className='Home-grid'>
         
         {catalog.map(product => (<ProductCard onChange={onChange} product={product} quantity={cart.get(product.id) ?? 0} className ='Card'/>))}
@@ -35,4 +37,4 @@ const Home = () => {
     </>
   );
 }
-export default Home;
+export default Home
