@@ -1,7 +1,9 @@
 // This test secret API key is a placeholder. Don't include personal details in requests with this key.
 // To see your test secret API key embedded in code samples, sign in to your Stripe account.
 // You can also find your test secret API key at https://dashboard.stripe.com/test/apikeys.
-const stripe = require('stripe')($STRIPE_KEY);
+require('dotenv').config();
+
+const stripe = require('stripe')(process.env.REACT_APP_STRIPE_KEY);
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
