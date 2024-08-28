@@ -1,11 +1,12 @@
 import React from 'react';
-import IconButton from "@mui/material/IconButton"
+import IconButton from '@mui/material/IconButton'
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-// import {sweater1, sweater2, sweater3, scarf1, scarf2} from './ProductInfo.js';
+
+import Cart from './Cart.js'
 import './ProductCard.css';
 
-const ProductCard = ({product}) => {
+const ProductCard = ({onChange, product, quantity}) => {
   return(
     <div className='Card'>
       <div className='container'>
@@ -14,9 +15,9 @@ const ProductCard = ({product}) => {
           <h2>{product.title}</h2>
           <p>{product.description}</p>
           <div className='Card-cart-row'>
-            <IconButton> <RemoveIcon /> </IconButton>
-            <>counter</>
-            <IconButton> <AddIcon /> </IconButton>
+            <IconButton onClick={()=>onChange(product.id, -1)}> <RemoveIcon /> </IconButton>
+              <p> {quantity} </p>
+            <IconButton onClick={()=>onChange(product.id, 1)}> <AddIcon /> </IconButton>
           </div>    
         </div>
       </div>
