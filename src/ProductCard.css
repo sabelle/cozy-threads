@@ -1,12 +1,12 @@
 .Card {
-  display: grid;
+  /* display: grid; */
   padding: 20px;
   
 
 };
 
 .Card-container {
-  display: grid;
+  /* display: flex; */
 
 }
 
