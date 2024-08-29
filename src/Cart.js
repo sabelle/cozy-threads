@@ -4,26 +4,17 @@ import Checkout from './Checkout'
 // import {Message, Checkout} from './Checkout.js'
 
 
-let globalCart = new Map()
-export const UpdateCart = (cart) => {
-    globalCart = cart
-    console.log('UPDATE CART ', globalCart)
-}
-export const Cart = () => {
-    // UpdateCart(cart)
-    // const updateCart = (cart) => {
-    //     const [cart, setCart] = useState(new Map())
-    //     setCart(cart)
-    // }
-    
-    console.log('CART PAGE - cart', globalCart)
-  return (
+
+const Cart = (cart) => {
+    // console.log('cart page, cart', cart)
+ return (
     <div>
       <Navigation />
       <h2>cart</h2>
-      
-      <Checkout cart={globalCart} />
+      <Checkout cart={cart} />
     </div>
         
   );
 }
+
+export default Cart
