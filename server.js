@@ -11,19 +11,36 @@ app.use(express.static('public'));
 const SERVER = 'http://localhost:4242';
 const CLIENT = 'http://localhost:3000';
 
+// create prices based on catalog
+// const price = await stripe.prices.create({
+//   currency: 'usd',
+//   unit_amount: 100,
+//   product_data: {
+//     name: 'Gold Plan',
+//   },
+// });
+
 app.post('/create-checkout-session', async (req, res) => {
+  let line_items = [
+    {
+      // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+      price: 'price_1PsJD902iTNqZvDhnIKYyU9f', //cream sweater
+      quantity: 1,
+      adjustable_quantity: {
+        enabled: true,
+      },
+    },
+    {
+      price: 'price_1PsJId02iTNqZvDhc3kYp2aq', // red scarf
+      quantity: 1,
+      adjustable_quantity: {
+        enabled: true,
+      },
+    },
+  ]
   const session = await stripe.checkout.sessions.create({
-    line_items: [
-      {
-        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        price: 'price_1PsJD902iTNqZvDhnIKYyU9f', //sweater
-        quantity: 1,
-      },
-      {
-        price: 'price_1PsJId02iTNqZvDhc3kYp2aq', //scarf
-        quantity: 1,
-      },
-    ],
+    line_items,
+    
     mode: 'payment',
     success_url: `${CLIENT}/home`,
     cancel_url: `${CLIENT}/cart`,

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './Home.css'
 import ProductCard from './ProductCard.js'
 import Navigation from './Navigation.js'
-import {catalog} from './ProductInfo.js'
+import {catalog} from './Catalog.js'
 
 const Home = () => {
   const [cart, setCart] = useState(new Map())
