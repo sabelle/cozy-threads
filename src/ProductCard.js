@@ -9,7 +9,7 @@ import './ProductCard.css';
 const ProductCard = ({onChange, product, quantity, price_id}) => {
   return(
     <div className='Card'>
-      <div className='container'>
+      <div className='Card-container'>
         <img src={product.image} alt='404' className='Card-photo'/>
         <div className='Card-info'>
           <h2>{product.title}</h2>
