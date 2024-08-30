@@ -34,7 +34,7 @@ function App () {
     }
     
     setCart(updatedCart)
-    console.log('updated cart:', updatedCart)
+    // console.log('updated cart:', updatedCart)
   }
   return (
     <div className="app">

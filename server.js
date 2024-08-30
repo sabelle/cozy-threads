@@ -15,17 +15,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use(express.json());
 app.use(express.urlencoded());
 
-// const CLIENT = 'http://localhost:3000'; // use when running locally
-const CLIENT = process.env.VERCEL_URL;
-
-// create prices based on catalog
-// const price = await stripe.prices.create({
-//   currency: 'usd',
-//   unit_amount: 100,
-//   product_data: {
-//     name: 'Gold Plan',
-//   },
-// });
+// const CLIENT = ; // use when running locally
+const CLIENT = process.env.VERCEL_URL || 'http://localhost:3000';
 
 app.post('/create-checkout-session', async (req, res) => {
   const payload = JSON.parse(req.body['cartPayload']) //list of objs
@@ -53,4 +44,5 @@ app.post('/create-checkout-session', async (req, res) => {
   res.redirect(303, session.url);
 });
 
-app.listen(4242, () => console.log('Running on port 4242'));
+const PORT = process.env.PORT || 4242;
+app.listen(PORT, () => console.log('Running on port', PORT));
