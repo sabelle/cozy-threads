@@ -27,7 +27,7 @@ const Checkout = (cart) => {
 
   return (
     <div>
-      <form className='checkout-form'action="/api/create-checkout-session" method="POST" >
+      <form className='checkout-form'action="/create-checkout-session" method="POST" >
         <input type='hidden' id= 'hiddenCart' name='cartPayload' value={jsonCart} /> 
         <button className='checkout-button' type="submit">
           checkout
