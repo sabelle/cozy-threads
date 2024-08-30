@@ -18,7 +18,7 @@ app.use(express.urlencoded());
 // const CLIENT = ; // use when running locally
 const CLIENT = process.env.VERCEL_URL || 'http://localhost:3000';
 
-app.post('/create-checkout-session', async (req, res) => {
+app.post('/api/create-checkout-session', async (req, res) => {
   const payload = JSON.parse(req.body['cartPayload']) //list of objs
   console.log('PARSED PAYLOAD', payload) // format '1': { price_id: 'price_xx', quantity: # },
   const line_items = []
