@@ -12,5 +12,7 @@
 - This site dynamically displays products in a grid. Upon decreasing browser width, less products will display per row.
 - Error handling for when there are no items in cart (user is not allowed to checkout) and when item quantity is decreased past zero (quantity remains nonnegative, at zero).
 
+![cart](public/assets/site-cart.png) ![checkout](public/assets/site-checkout.png)
+
 ## to run locally:
 Clone the repo locally. Create a `.env file`, and variable `REACT_APP_STRIPE_KEY` to hold the Stripe test api key. This key can be obtained from the [Stripe developer dashboard](https://dashboard.stripe.com/test/apikeys). Once set up, run `npm install && npm start` in terminal to launch the application.
