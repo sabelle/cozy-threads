@@ -12,6 +12,7 @@ export const ProductCard = ({onChange, product, quantity, price_id}) => {
         <img src={product.image} alt='404' className='card-photo'/>
         <div className='card-info'>
           <h2 className='card-title'>{product.title}</h2>
+          <h4 className='card-price'>${(product.price).toFixed(2)}</h4>
           <p className='card-description'>{product.description}</p>
           <div className='card-cart-row'>
             <button className='card-button' onClick={()=>onChange(product.id, -1, price_id)}> - </button>
