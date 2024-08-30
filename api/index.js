@@ -37,8 +37,10 @@ app.post('/create-checkout-session', async (req, res) => {
     line_items,
     
     mode: 'payment',
-    success_url: `${CLIENT}/`,
-    cancel_url: `${CLIENT}/`,
+    success_url: 'https://cozy-threads-seven.vercel.app/',
+    cancel_url: 'https://cozy-threads-seven.vercel.app/',
+    // success_url: `${CLIENT}/`,
+    // cancel_url: `${CLIENT}/`,
   });
 
   res.redirect(303, session.url);
