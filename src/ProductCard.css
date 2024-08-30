@@ -3,7 +3,7 @@
   padding: 20px;
   outline-color: grey
 
-};
+}
 
 .Card-container {
   display: flex;
@@ -14,13 +14,13 @@
 .Card-photo {
   float: left;
   height: 200px;
-};
+}
 
 .Card-info {
   float: left;
-};
+}
 
 .Card-cart-row {
   flex-direction: row;
-};
+}
   
