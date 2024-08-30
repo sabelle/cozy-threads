@@ -1,12 +1,13 @@
 .Card {
-  /* display: grid; */
+  display: flex;
   padding: 20px;
-  
+  outline-color: grey
 
 };
 
 .Card-container {
   display: flex;
+  /* justify-content: center; */
 
 }
 
@@ -17,7 +18,7 @@
 
 .Card-info {
   float: left;
-}
+};
 
 .Card-cart-row {
   flex-direction: row;
