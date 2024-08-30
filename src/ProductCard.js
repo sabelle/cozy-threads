@@ -14,9 +14,9 @@ export const ProductCard = ({onChange, product, quantity, price_id}) => {
           <h2 className='card-title'>{product.title}</h2>
           <p className='card-description'>{product.description}</p>
           <div className='card-cart-row'>
-            <IconButton onClick={()=>onChange(product.id, -1, price_id)}> <RemoveIcon /> </IconButton>
+            <button className='card-button' onClick={()=>onChange(product.id, -1, price_id)}> - </button>
               <h4 className='card-cart-quantity'>{quantity} </h4>
-            <IconButton onClick={()=>onChange(product.id, 1, price_id)}> <AddIcon /> </IconButton>
+            <button className='card-button' onClick={()=>onChange(product.id, 1, price_id)}> + </button>
           </div>    
         </div>
       </div>
