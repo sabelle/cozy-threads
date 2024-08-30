@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use(express.json());
 app.use(express.urlencoded());
 
-
-const CLIENT = 'https://cozy-threads-seven.vercel.app';
+// const CLIENT = 'http://localhost:3000'; // use when running locally
+const CLIENT = process.env.VERCEL_URL;
 
 // create prices based on catalog
 // const price = await stripe.prices.create({
