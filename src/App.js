@@ -36,7 +36,7 @@ function App () {
     console.log('updated cart:', updatedCart)
   }
   return (
-    <div className="App">
+    <div className="app">
       {/* <cartContext.Provider value={{globalCart: globalCart, setGlobalCart: setGlobalCart}}> */}
       <Routes>
         <Route path="/" element={<Home cart={cart} onChange={onChange}/>} />

@@ -1,26 +1,26 @@
-.Card {
+.card {
   display: flex;
   padding: 20px;
   outline-color: grey
 
 }
 
-.Card-container {
+.card-container {
   display: flex;
   /* justify-content: center; */
 
 }
 
-.Card-photo {
+.card-photo {
   float: left;
   height: 200px;
 }
 
-.Card-info {
+.card-info {
   float: left;
 }
 
-.Card-cart-row {
+.card-cart-row {
   flex-direction: row;
 }
   
