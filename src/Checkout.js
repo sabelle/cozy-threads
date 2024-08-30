@@ -23,12 +23,13 @@ const Checkout = (cart) => {  //cart key: id, val: [quantity, price id]
   
   
   const jsonCart = JSON.stringify(finalCart)
-  console.log('FINAL CART::', finalCart)
+  // console.log('FINAL CART::', finalCart)
 
   return (
     <div>
       <form action="/create-checkout-session" method="POST" >
         <input type='hidden' id= 'hiddenCart' name='cartPayload' value={jsonCart} /> 
+        <p> ready to checkout? </p>
         <IconButton type="submit">
           <ShoppingCartIcon />
         </IconButton>

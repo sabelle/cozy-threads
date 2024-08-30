@@ -1,7 +1,7 @@
 import React from 'react'
 import './Home.css'
 import Cart from './Cart'
-import ProductCard from './ProductCard.js'
+import {ProductCard} from './ProductCard.js'
 import Navigation from './Navigation.js'
 import {catalog} from './Catalog.js'
 
@@ -16,7 +16,7 @@ const Home = ({cart, onChange}) => {
             product={product} 
             quantity={cart[product.id] ? cart[product.id]['quantity']: 0} 
             price_id={product.price_id}
-            className ='Card'/>))}
+            className ='card'/>))}
       </div>
     </>
   );

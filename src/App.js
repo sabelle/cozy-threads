@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 
 // export const cartContext = React.createContext(new Map())
+// cart structure::
 // product_id: {
 //   'quantity': #,
 //   'price_id': 'price_xxxxx'
@@ -15,7 +16,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 
 function App () {
   const [cart, setCart] = useState({})
-  const onChange = (id, increment, price_id) => { //cart key: id, val: [quantity, price id]
+  const onChange = (id, increment, price_id) => { 
     const updatedCart = {...cart}
     if (id in updatedCart) { 
       let updatedQuantity = updatedCart[id]['quantity'] + increment;

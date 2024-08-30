@@ -2,13 +2,11 @@
   display: flex;
   padding: 20px;
   outline-color: grey
-
 }
 
 .card-container {
   display: flex;
   /* justify-content: center; */
-
 }
 
 .card-photo {
@@ -23,4 +21,27 @@
 .card-cart-row {
   flex-direction: row;
 }
-  
+
+.display {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  outline-color: grey
+}
+
+.display-container {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.display-photo {
+  float: left;
+  height: 50px;
+}
+
+.display-info {
+  padding-left: 15px;
+}
