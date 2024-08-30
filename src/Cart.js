@@ -27,7 +27,6 @@ const Cart = (cart) => {
     <div>
       <Navigation />
       <h2>cart</h2>
-      <p>items in your cart:</p>
       {filtered_catalog.map(product => (
         
           <ProductDisplay

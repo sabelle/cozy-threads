@@ -1,25 +1,45 @@
 .card {
   display: flex;
   padding: 20px;
-  outline-color: grey
+  flex-direction: column;
+  position: relative;
+  height: mi;
 }
 
 .card-container {
-  display: flex;
-  /* justify-content: center; */
+  display: block;
+  flex-direction: column;
 }
 
 .card-photo {
-  float: left;
+  float: center;
   height: 200px;
+  margin-bottom: 125px;
 }
 
 .card-info {
-  float: left;
+  float: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.card-title {
+  margin: 10px;
+}
+
+.card-description {
+  margin: 5px;
 }
 
 .card-cart-row {
   flex-direction: row;
+}
+
+.card-cart-quantity {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
 }
 
 .display {
@@ -29,12 +49,10 @@
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  outline-color: grey
 }
 
 .display-container {
   display: flex;
-  /* justify-content: center; */
 }
 
 .display-photo {
@@ -44,4 +62,8 @@
 
 .display-info {
   padding-left: 15px;
+}
+
+.display-text {
+  font-size: large;
 }

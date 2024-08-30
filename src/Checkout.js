@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react"
 import axios from "axios"
 import IconButton from "@mui/material/IconButton"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import './Checkout.css'
 
-
-const Checkout = (cart) => {  //cart key: id, val: [quantity, price id]
+const Checkout = (cart) => { 
   let finalCart = cart['cart']['cart']
   if (Object.keys(finalCart).length == 0) {
     return (
@@ -27,12 +27,11 @@ const Checkout = (cart) => {  //cart key: id, val: [quantity, price id]
 
   return (
     <div>
-      <form action="/create-checkout-session" method="POST" >
+      <form className='checkout-form'action="/create-checkout-session" method="POST" >
         <input type='hidden' id= 'hiddenCart' name='cartPayload' value={jsonCart} /> 
-        <p> ready to checkout? </p>
-        <IconButton type="submit">
-          <ShoppingCartIcon />
-        </IconButton>
+        <button className='checkout-button' type="submit">
+          checkout
+        </button>
       </form>
   </div>
   )

@@ -12,6 +12,7 @@ const Navigation = () => {
           <Link to ='/cart' className='nav-page'>cart</Link>
         </li>
       </ul>
+      <h1 className='website-title'>cozy threads</h1>
     </nav>
   );
 

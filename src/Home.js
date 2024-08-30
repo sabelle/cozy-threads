@@ -9,6 +9,7 @@ const Home = ({cart, onChange}) => {
   return (
     <>
       <Navigation />
+      <h2>products</h2>
       <div className='home-grid'>
         {catalog.map(product => (
           <ProductCard 

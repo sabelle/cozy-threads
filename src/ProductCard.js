@@ -11,11 +11,11 @@ export const ProductCard = ({onChange, product, quantity, price_id}) => {
       <div className='card-container'>
         <img src={product.image} alt='404' className='card-photo'/>
         <div className='card-info'>
-          <h2>{product.title}</h2>
-          <p>{product.description}</p>
+          <h2 className='card-title'>{product.title}</h2>
+          <p className='card-description'>{product.description}</p>
           <div className='card-cart-row'>
             <IconButton onClick={()=>onChange(product.id, -1, price_id)}> <RemoveIcon /> </IconButton>
-              <> {quantity} </>
+              <h4 className='card-cart-quantity'>{quantity} </h4>
             <IconButton onClick={()=>onChange(product.id, 1, price_id)}> <AddIcon /> </IconButton>
           </div>    
         </div>
@@ -30,7 +30,7 @@ export const ProductDisplay = ({product, quantity, price}) => {
       <div className='display-container'>
         <img src={product.image} alt='404' className='display-photo'/>
         <div className='display-info'>
-          <p>{product.title} x{quantity}</p>
+          <p className='display-text'>{product.title} x{quantity}</p>
         </div>
       </div>
     </div>
