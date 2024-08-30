@@ -16,8 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 
-const SERVER = 'http://localhost:4242';
-const CLIENT = 'http://localhost:3000';
+const CLIENT = 'https://cozy-threads-seven.vercel.app';
 
 // create prices based on catalog
 // const price = await stripe.prices.create({
